@@ -1,0 +1,96 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color-scheme: light dark;
+  --primary-color: #4caf50; /* 主色调 - 绿色 */
+  --background-color: #e0f7fa; /* 背景色 - 浅蓝 */
+  --text-color: #212121; /* 文字颜色 - 深灰 */
+  --card-background: #ffffff; /* 卡片背景 - 白色 */
+  --button-background: #4caf50; /* 按钮背景 - 绿色 */
+  --button-hover: #388e3c; /* 按钮悬停颜色 - 深绿色 */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* 纵向排列 */
+  align-items: center; /* 居中对齐 */
+  justify-content: flex-start; /* 顶部对齐 */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 20px; /* 增加整体边距 */
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: var(--primary-color); /* 使用主色调 */
+  margin-bottom: 1em; /* 增加底部间距 */
+  text-align: center; /* 文字居中 */
+}
+
+.card {
+  padding: 1.5em;
+  background-color: var(--card-background);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 15px; /* 增加卡片之间的间距 */
+  width: 100%; /* 占满容器 */
+  max-width: 500px; /* 最大宽度限制 */
+}
+
+button {
+  border-radius: 25px;
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: var(--button-background);
+  color: white; /* 按钮文字颜色 */
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+button:hover {
+  background-color: var(--button-hover); /* 悬停时按钮颜色变化 */
+  transform: scale(1.05); /* 悬停时按钮放大效果 */
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 响应式网格布局 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自适应列 */
+  gap: 30px; /* 网格间距 */
+  padding: 20px; /* 网格内边距 */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff; /* 背景色 */
+    --text-color: #333; /* 文字颜色 */
+    --card-background: #f7f7f7; /* 卡片背景 */
+  }
+  button {
+    background-color: #ff80ab; /* 按钮背景色 */
+  }
+}
+
+/* 深色模式样式 */
+.dark {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --card-background: #1e1e1e; /* 深色卡片背景 */
+}
