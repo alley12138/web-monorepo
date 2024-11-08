@@ -99,6 +99,6 @@ function openAleart() {
 }
 
 a:focus {
-  color: purple;
+  color: rgb(0, 128, 113);
 }
 </style>
